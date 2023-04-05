@@ -1,55 +1,28 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh
-}
-
-#keyboard {
+.keyboard {
     position: fixed;
     left:0;
     bottom: 0;
     padding: 10px 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    height: fit-content;
     flex-wrap: wrap;
     overflow-wrap: normal;
     gap: 10px;
     align-content: center;
     align-items: center;
-    transition: bottom .4s;
-    background-color: darkcyan;
+    transition: all .4s ease-in-out;
+    background-color: dodgerblue;
 }
 
 .keysContainer {
-    position: fixed;
-    left:0;
-    bottom: 0;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    flex-wrap: wrap;
-    overflow-wrap: normal;
-    gap: 10px;
-    align-content: center;
-    align-items: center;
-    transition: bottom .4s;
-    background-color: darkcyan;
+    text-align: center;
 }
 
 .keyboardHidden {
     bottom: -100%;
-
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
 }
 
 .btn {
@@ -67,14 +40,8 @@ body {
     transition: all .1s ease-in-out;
 }
 
-.btn:active {
-    background-color: rgba(0, 0, 0, .4);
-    box-shadow: none;
-    color: white
-}
-
 .active {
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .3);
     box-shadow: none;
     color: white
 }
@@ -85,10 +52,11 @@ body {
     resize: none;
 }
 
-.keyBoardKey {
+.keyboardKey {
     display: inline-flex;
+    vertical-align: top;
     height: 45px;
-    width: 6%;
+    width: 8%;
     max-width: 90px;
     background-color: rgba(255, 255, 255, .4);
     font-weight: 700;
@@ -98,6 +66,13 @@ body {
     align-items: center;
     justify-content: center;
     transition: all .1s ease-in-out;
+    margin: .1%;
+}
+
+.keyboardKey:active {
+    background-color: rgba(0, 0, 0, .4);
+    box-shadow: none;
+    color: white
 }
 
 .keyboardKeyWide {
@@ -106,26 +81,29 @@ body {
 
 .keyboardKeyExtraWide {
     width: 36%;
+    min-width: 250px;
     max-width: 500px;
 }
 
 .keyboardActivatable {
+    position: relative
+}
+
+.keyboardIndicator {
     position: absolute;
     top:0;
     right: 0;
-    padding: 3px;
+    height: 10px;
+    width: 10px;
+    margin: 7px;
     border-radius: 50%;
+    background-color: rgba(0,0,0,.8);
 }
 
-#shift_Button {
-    width: 210px
+.keyboardIndicatorActive {
+    background-color: rgba(255,255,255,.6);
 }
 
-#capslock_Button {
-    width: 160px
-}
-
-#_Button {
-    width: calc(42% + 160px);
-    max-width: none
+#textArea {
+    width: 100%
 }
