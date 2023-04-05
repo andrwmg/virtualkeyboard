@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+#keyboard {
+    position: fixed;
+    left:0;
+    bottom: 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow-wrap: normal;
+    gap: 10px;
+    align-content: center;
+    align-items: center;
+    transition: bottom .4s;
+    background-color: darkcyan;
+}
+
+.keysContainer {
+    position: fixed;
+    left:0;
+    bottom: 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow-wrap: normal;
+    gap: 10px;
+    align-content: center;
+    align-items: center;
+    transition: bottom .4s;
+    background-color: darkcyan;
+}
+
+.keyboardHidden {
+    bottom: -100%;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-flex;
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    background-color: rgba(255, 255, 255, .4);
+    font-weight: 700;
+    border-radius: 10px;
+    border: 0.1px solid rgba(0,0,0,.8);
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,.4);
+    align-items: center;
+    justify-content: center;
+    transition: all .1s ease-in-out;
+}
+
+.btn:active {
+    background-color: rgba(0, 0, 0, .4);
+    box-shadow: none;
+    color: white
+}
+
+.active {
+    background-color: rgba(0, 0, 0, .4);
+    box-shadow: none;
+    color: white
+}
+
+#inputBox {
+    width: 90%;
+    font-size: larger;
+    resize: none;
+}
+
+.keyBoardKey {
+    display: inline-flex;
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    background-color: rgba(255, 255, 255, .4);
+    font-weight: 700;
+    border-radius: 10px;
+    border: 0.1px solid rgba(0,0,0,.8);
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,.4);
+    align-items: center;
+    justify-content: center;
+    transition: all .1s ease-in-out;
+}
+
+.keyboardKeyWide {
+    width: 12%
+}
+
+.keyboardKeyExtraWide {
+    width: 36%;
+    max-width: 500px;
+}
+
+.keyboardActivatable {
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+#shift_Button {
+    width: 210px
+}
+
+#capslock_Button {
+    width: 160px
+}
+
+#_Button {
+    width: calc(42% + 160px);
+    max-width: none
+}
